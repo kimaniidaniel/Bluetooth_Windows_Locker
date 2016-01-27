@@ -19,13 +19,13 @@ except:
     print "Issue with bluetooth lookup, halting"
 
 for bdaddr, device_name in nearby_devices:
-    print device_name, bdaddr
+    #print device_name, bdaddr #<--for debugging
     services = bluetooth.find_service(address=bdaddr)
     if your_device_bluetooth_name == device_name and len(services)>0:
-        print "found target bluetooth device with address ", bdaddr
+        print "found",your_device_bluetooth_name,"with address", bdaddr
         lock = False
         break
 
 if lock:
     print "Locking computer!"
-    #ctypes.windll.user32.LockWorkStation()
+    ctypes.windll.user32.LockWorkStation()
