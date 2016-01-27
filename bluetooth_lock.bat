@@ -1,1 +1,0 @@
-python C:\temp\scripts\python\bluetooth_lock.py
