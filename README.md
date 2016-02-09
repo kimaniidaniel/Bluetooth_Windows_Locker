@@ -3,6 +3,6 @@ This is a small python script that can be scheduled to lock you computer on abse
 
 Requirements:
 pip install ctypes 
-pip install pybluez
+install pybluez - https://pypi.python.org/pypi/PyBluez
 
 http://kimaniidaniel.com/windows_bluetooth_locker

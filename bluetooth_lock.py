@@ -5,6 +5,9 @@ import ctypes
 To use this tool change the your_device_bluetooth_name to
 your device blueooth name - you should be able to find this
 in your device's bluetooth settings
+
+Requirements:
+ 1. Install PyBluez - https://pypi.python.org/pypi/PyBluez
 """
 #--------------Change Here--------------
 your_device_bluetooth_name = "Xperia Z2"
@@ -19,7 +22,7 @@ except:
     print "Issue with bluetooth lookup, halting"
 
 for bdaddr, device_name in nearby_devices:
-    #print device_name, bdaddr #<--for debugging
+    print device_name, bdaddr #<--for debugging
     services = bluetooth.find_service(address=bdaddr)
     if your_device_bluetooth_name == device_name and len(services)>0:
         print "found",your_device_bluetooth_name,"with address", bdaddr
